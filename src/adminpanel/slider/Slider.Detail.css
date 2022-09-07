@@ -5,6 +5,7 @@
 
 .slidersidebardetail .table{
     margin-top: 40px;
+    margin-right: 90px !important;
 }
 .slidersidebardetail img {
     height: 200px;
@@ -19,6 +20,10 @@
     width: 40%;
 }
 
+.slidersidebardetail .text{
+    margin-top: 25px;
+}
+
 .slidersidebardetail .btn1{
     background-color: rgb(220, 216, 216) !important;
     color: #333;
@@ -31,4 +36,5 @@
 
 .slidersidebardetail .btnn{
     margin-top: 20px;
+    
 }

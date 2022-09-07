@@ -29,7 +29,7 @@ const Product = () => {
     <> 
     <section id='featured'>
     <div className="container">
-      <div className="row justify-content-between">
+      <div className="row alldv justify-content-between">
         <div className="top">
           <h3>FEATURED PRODUCTS</h3>
         </div>
@@ -55,8 +55,8 @@ const Product = () => {
   {
     model===true ? <Modal image={tempdata[1]} title={tempdata[2]} price={tempdata[3]} hide={()=>setModel(false)}/> :" "
   }
-  <div className='loadmore'>
-    <button>Load More</button>
+  <div className='loadmorediv'>
+    <NavLink className='loadmore' to='/'>LOAD MORE</NavLink>
   </div>
  </>
   )

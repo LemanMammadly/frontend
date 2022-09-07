@@ -37,7 +37,7 @@ header img{
   }
 
 header i{
-    font-size: 26px;
+    font-size: 26px !important;
     color: rgb(180, 175, 175);
     position: relative;
     cursor: pointer;

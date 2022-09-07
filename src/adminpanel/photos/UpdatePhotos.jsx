@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
-import Sidebar from '../../components/SideBar/Sidebar/Sidebar'
 import './UpdatePhotos.css'
+import SideBarDrop from '../../components/SideBarDropdown/SideBarDrop'
 
 
 
@@ -42,7 +42,7 @@ const UpdatePhotos = () => {
   return (
     <div className='row justify-content-center'>
         <div className="col-lg-2">
-          <Sidebar/>
+          <SideBarDrop/>
         </div>
         <div className="container updatePhoto col-lg-4">
             <form onSubmit={handleSubmit} className="content">
@@ -53,7 +53,7 @@ const UpdatePhotos = () => {
                     <input value={inputs.image} onChange={handleChange} name='image' class="fld" placeholder="Enter image" id="image" />
                 </div>
                 </div>
-                <button className="btn upd" type="submit">Update Photo</button>
+                <button className="btn upd" type="submit">UPDATE</button>
             </form>
     </div>
         

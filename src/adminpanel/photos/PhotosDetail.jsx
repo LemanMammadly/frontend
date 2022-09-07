@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
-import Sidebar from '../../components/SideBar/Sidebar/Sidebar';
+import SideBarDrop from '../../components/SideBarDropdown/SideBarDrop';
 import './PhotosDetail.css'
 
 const PhotosDetail = () => {
@@ -22,7 +22,7 @@ const PhotosDetail = () => {
   return (
     <div className='photosdetail'>
     <div className="col-lg-3">
-     <Sidebar/>
+      <SideBarDrop/>
     </div>
         <table class="table table-image">
     {photos&&photos.map((photoss,id)=>(

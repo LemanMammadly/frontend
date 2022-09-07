@@ -1,5 +1,7 @@
 import React from 'react'
 import Slideer from '../../pages/Slideer/Slideer'
+import Instagram from '../Instagram/Instagram'
+import Lookbook from '../Lookbook/Lookbook'
 import Photos from '../Photos/Photos'
 import Product from '../Products/Product'
 
@@ -9,6 +11,8 @@ const Home = () => {
       <Slideer/>
       <Photos/>
       <Product/>
+      <Lookbook/>
+      <Instagram/>
     </div>
   )
 }

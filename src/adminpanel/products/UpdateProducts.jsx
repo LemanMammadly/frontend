@@ -1,7 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import Sidebar from '../../components/SideBar/Sidebar/Sidebar'
+import SideBarDrop from '../../components/SideBarDropdown/SideBarDrop'
+import './UpdateProducts.css'
 
 const UpdateProducts = () => {
     const history=useNavigate()
@@ -40,9 +41,9 @@ const UpdateProducts = () => {
   return (
     <div className='row justify-content-center'>
         <div className="col-lg-2">
-          <Sidebar/>
+          <SideBarDrop/>
         </div>
-        <div className="container updatePhoto col-lg-4">
+        <div className="container updateproducts col-lg-4">
             <form onSubmit={handleSubmit} className="content">
                 <h1 id="say-hello">Update Products!</h1>
                 <div>
@@ -59,7 +60,7 @@ const UpdateProducts = () => {
                     <input value={inputs.price} onChange={handleChange} name='price' class="fld" placeholder="Enter price" id="price" />
                 </div>
                 </div>
-                <button className="btn upd" type="submit">Update Photo</button>
+                <button className="btn upd" type="submit">UPDATE</button>
             </form>
     </div>
         

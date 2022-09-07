@@ -1,8 +1,17 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import './Footer.css'
 
 const Footer = () => {
+    const[settings,setSettings]=useState([])
+
+    useEffect(() => {
+        axios.get('http://localhost:5000/setting')
+          .then(res => setSettings(res.data.settings)) 
+          .catch(error => console.log(error))
+      },[])
+
     const { pathname } = useLocation();
     if (pathname === "/admin") return null;
     if (pathname === "/addSlider") return null;
@@ -13,6 +22,12 @@ const Footer = () => {
     if (pathname === '/photosDetail') return null;
     if (pathname === '/addproducts') return null;
     if (pathname === '/productdetail') return null;
+    if (pathname === '/addInstagram') return null;
+    if (pathname === '/instagramdetail') return null;
+    if (pathname === '/logodetail') return null;
+    if (pathname === '/settingdetail') return null;
+
+
 
 
 
@@ -23,16 +38,19 @@ const Footer = () => {
                 <div className="top row justify-content-between align-items-center">
                     <div className="touch col-lg-4">
                         <h4>GET IN TOUCH</h4>
-                       <div className="row all-links">
-                       <p>Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879</p>
-                        <div>
-                            <a href="/"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="/"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="/"><i class="fa-brands fa-pinterest-p"></i></a>
-                            <a href="/"><i class="fa-brands fa-snapchat"></i></a>
-                            <a href="/"><i class="fa-brands fa-youtube"></i></a>
-                        </div>
-                       </div>
+                        {settings&&settings.map((settingss)=>(
+                        <div className="row all-links">
+                                <p>Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+994) {settingss.phone}</p>
+                                    <div>
+                                        <a href="/"><i className={settingss.icon1}></i></a>
+                                        <a href="/"><i className={settingss.icon2}></i></a>
+                                        <a href="/"><i className={settingss.icon3}></i></a>
+                                        <a href="/"><i className={settingss.icon4}></i></a>
+                                        <a href="/"><i className={settingss.icon5}></i></a>
+                                    </div>
+                            </div>
+                        ))}
+                       
                     </div>
                     <div className="categories col-lg-1">
                         <h4>CATEGORIES</h4>

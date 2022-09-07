@@ -1,8 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
-import Sidebar from '../../components/SideBar/Sidebar/Sidebar'
 import { useNavigate } from 'react-router-dom'
+import SideBarDrop from '../../components/SideBarDropdown/SideBarDrop'
+import "./AddSlider.css"
 
 const AddSlider = () => {
     
@@ -36,9 +37,9 @@ const AddSlider = () => {
   return (
    <div className='row justify-content-center'>
         <div className="col-lg-2">
-          <Sidebar/>
+          <SideBarDrop/>
         </div>
-        <div className="container updateslider col-lg-4">
+        <div className="container addSlider col-lg-4">
             <form onSubmit={handleSubmit} className="content">
                 <h1 id="say-hello">Add Slider!</h1>
                 <div>
@@ -57,7 +58,7 @@ const AddSlider = () => {
                     <input value={inputs.image} onChange={handleChange} name='image' class="fld" placeholder="Enter image" id="image" />
                 </div>
                 </div>
-                <button className="btn upd" type="submit">Add Slider</button>
+                <button className="btn upd" type="submit">ADD</button>
             </form>
     </div>
         

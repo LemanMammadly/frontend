@@ -1,7 +1,9 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Sidebar from '../../components/SideBar/Sidebar/Sidebar'
+import SideBarDrop from '../../components/SideBarDropdown/SideBarDrop'
+import './AddProducts.css'
+
 
 const AddProducts = () => {
     const history=useNavigate()
@@ -35,11 +37,11 @@ const AddProducts = () => {
     <div>
       <div className='row justify-content-center'>
         <div className="col-lg-2">
-          <Sidebar/>
+          <SideBarDrop/>
         </div>
-        <div className="container updateslider col-lg-4">
+        <div className="container addproducts col-lg-4">
             <form onSubmit={handleSubmit} className="content">
-                <h1 id="say-hello">Add Card!</h1>
+                <h1 id="say-hello">Add Products to Card!</h1>
                 <div>
                 <div className="image">
                     <label for="image">Image</label><br />
@@ -56,7 +58,7 @@ const AddProducts = () => {
                     <input value={inputs.price} onChange={handleChange} name='price' class="fld" placeholder="Enter price" id="price" />
                 </div>
                 </div>
-                <button className="btn upd" type="submit">Add Product</button>
+                <button className="btn upd" type="submit">ADD</button>
             </form>
     </div>
     </div>

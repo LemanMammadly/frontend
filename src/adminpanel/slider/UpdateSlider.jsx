@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import './UpdateSlider.css'
-import Sidebar from '../../components/SideBar/Sidebar/Sidebar'
 import { useNavigate } from 'react-router-dom'
+import SideBarDrop from '../../components/SideBarDropdown/SideBarDrop'
 
 
 const UpdateSlider = () => {
@@ -52,7 +52,7 @@ const UpdateSlider = () => {
   return (
     <div className='row justify-content-center'>
         <div className="col-lg-2">
-          <Sidebar/>
+          <SideBarDrop/>
         </div>
         <div className="container updateslider col-lg-4">
             <form onSubmit={handleSubmit} className="content">
@@ -73,7 +73,7 @@ const UpdateSlider = () => {
                     <input value={inputs.image} onChange={handleChange} name='image' class="fld" placeholder="Enter image" id="image" />
                 </div>
                 </div>
-                <button className="btn upd" type="submit">Update Slider</button>
+                <button className="btn upd" type="submit">UPDATE</button>
             </form>
     </div>
         

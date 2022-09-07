@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
 import './ProductDetail.css'
-import Sidebar from '../../components/SideBar/Sidebar/Sidebar';
+import SideBarDrop from '../../components/SideBarDropdown/SideBarDrop';
 
 const ProductDetail = () => {
   const history=useNavigate();
@@ -24,7 +24,7 @@ const ProductDetail = () => {
     <div>
        <div className='productdetail'>
       <div className="col-lg-3">
-       <Sidebar/>
+       <SideBarDrop/>
       </div>
       	<table class="table table-image">
       {products&&products.map((productss,id)=>(
